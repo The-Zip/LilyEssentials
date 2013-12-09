@@ -84,7 +84,7 @@ public abstract class Config {
     }
     
     /**
-     * Internal method - used by load();
+     * Internal method - used by load( );
      * @param plugin
      * @throws Exception
      */

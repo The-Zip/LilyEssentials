@@ -3,6 +3,7 @@ package com.bobacadodl.lilyessentials;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.logging.Logger;
 
 import lilypad.client.connect.api.Connect;
 import lilypad.client.connect.api.request.RequestException;
@@ -44,7 +45,7 @@ public class LilyEssentials extends JavaPlugin {
 		getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
 		config = new LilyEssentialsConfig(this);
 		config.load();
-		log.info("LilyEssentials has been enabled successfully!");
+		log.info(ChatColor.GREEN + "LilyEssentials has been enabled successfully!");
 
 		getCommand("admin").setExecutor(new AdminchatCommand(this));
 		getCommand("alert").setExecutor(new AlertCommand(this));
@@ -62,7 +63,7 @@ public class LilyEssentials extends JavaPlugin {
 
 	public void onDisable() {
 		config.save();
-		log.info("LilyEssentials has been disabled and saved!");
+		log.info(ChatColor.GREEN + "LilyEssentials has been disabled and saved!");
 	}
 
 	public void redirectRequest(String server, final Player player) {

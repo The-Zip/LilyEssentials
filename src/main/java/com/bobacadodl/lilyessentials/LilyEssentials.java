@@ -23,6 +23,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 import com.bobacadodl.lilyessentials.commands.*;
 
 public class LilyEssentials extends JavaPlugin {
+	
+	public Logger log = Logger.getLogger("Minecraft"); 
 
 	private Connect connect;
 
@@ -42,6 +44,7 @@ public class LilyEssentials extends JavaPlugin {
 		getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
 		config = new LilyEssentialsConfig(this);
 		config.load();
+		log.info("LilyEssentials has been enabled succesfully!");
 
 		getCommand("admin").setExecutor(new AdminchatCommand(this));
 		getCommand("alert").setExecutor(new AlertCommand(this));
@@ -59,6 +62,7 @@ public class LilyEssentials extends JavaPlugin {
 
 	public void onDisable() {
 		config.save();
+		log.info("LilyEssentials has been disabled and saved!");
 	}
 
 	public void redirectRequest(String server, final Player player) {

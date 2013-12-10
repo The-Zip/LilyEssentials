@@ -44,7 +44,7 @@ public class LilyEssentials extends JavaPlugin {
 		getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
 		config = new LilyEssentialsConfig(this);
 		config.load();
-		log.info("LilyEssentials has been enabled succesfully!");
+		log.info("LilyEssentials has been enabled successfully!");
 
 		getCommand("admin").setExecutor(new AdminchatCommand(this));
 		getCommand("alert").setExecutor(new AlertCommand(this));

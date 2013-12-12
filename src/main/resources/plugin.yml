@@ -62,6 +62,7 @@ permissions:
       lilyessentials.admin.dispatchserver: true
       lilyessentials.admin.send: true
       lilyessentials.admin.sendall: true
+      lilyessentials.admin.hide: true
   lilyessentials.admin.chat:
     description: Access to adminChat
     default: op
@@ -89,6 +90,6 @@ permissions:
   lilyessentials.admin.send:
     description: send a player to another server
     default: op
-  lilyessentials.admin.sendall:
-    description: send all players to another server
+  lilyessentials.admin.hide:
+    description: hides the player from messages
     default: op

@@ -1,6 +1,6 @@
 name: LilyEssentials
 version: 1.2
-description: Essentials for LilyPad!
+description: Essential Commands and Features for LilyPad!
 author: The_Zip
 main: com.bobacadodl.lilyessentials.LilyEssentials
 depend: [LilyPad-Connect]

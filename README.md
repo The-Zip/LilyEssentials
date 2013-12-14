@@ -2,6 +2,8 @@ LilyEssentials
 ==============
 Essential Commands and Features for LilyPad!
 
+View this resource: http://www.lilypadmc.org/resources/lilyessentials.7/
+
 ## Information
 Hey guys, The_Zip here. Unfortunately bobacadodl has left the Minecraft community to more personal real life stuff. Because of this, he has given me the LilyEssentials source code, and I am updating it. If you are familiar with the LilyPad code, and would like to help me out, send me a message.
 

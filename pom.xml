@@ -46,7 +46,7 @@
 
 	<build>
 		<defaultGoal>clean package</defaultGoal>
-		<finalName>Lilyessentials</finalName>
+		<finalName>LilyEssentials</finalName>
 		<resources>
 			<resource>
 				<targetPath>.</targetPath>

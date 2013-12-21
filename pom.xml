@@ -5,7 +5,7 @@
   <version>1.2</version>
   <name>LilyEssentials</name>
   <url>http://www.lilypadmc.org/resources/lilyessentials.7/</url>
-  <description>Simple HubKick plugin for LilyPad</description>
+  <description>Essential Commands and Features for LilyPad!</description>
   
   <build>
         <finalName>LilyEssentials</finalName>

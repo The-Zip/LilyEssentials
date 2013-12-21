@@ -1,31 +1,12 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  
   <groupId>com.bobaccadodl</groupId>
   <artifactId>lilyessentials</artifactId>
   <version>1.2</version>
-  <packaging>jar</packaging>
-
   <name>LilyEssentials</name>
   <url>http://www.lilypadmc.org/resources/lilyessentials.7/</url>
+  <description>Simple HubKick plugin for LilyPad</description>
   
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <build.number>Unknown</build.number>
-    <main.class>com.bobacadodl.lilyessentials.LilyEssentials</main.class>
-  </properties>
-  
-  <repositories>
-    <repository>
-      <id>lilypad</id>
-      <url>http://ci.lilypadmc.org/plugin/repository/everything</url>
-    </repository>
-    <repository>
-      <id>repobo-snap</id>
-      <url>http://repo.bukkit.org/content/groups/public</url>
-    </repository>
-  </repositories>
   <build>
         <finalName>LilyEssentials</finalName>
         <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
@@ -75,7 +56,6 @@
             </extension>
         </extensions>
     </build>
-  
   <dependencies>
     <dependency>
       <groupId>org.bukkit</groupId>

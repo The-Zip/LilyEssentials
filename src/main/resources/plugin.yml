@@ -32,6 +32,8 @@ commands:
   glist:
     aliases: [globallist, listall, servers]
     description: Global player list
+  ignore:
+    description: Ignore someone
 permissions:
   lilyesssentials.*:
     description: All LilyEssentials perms

@@ -40,6 +40,7 @@ public class LilyEssentials extends JavaPlugin {
 		getServer().getPluginManager().registerEvents(serverSync, this);
 		connect = getServer().getServicesManager().getRegistration(Connect.class).getProvider();
 		connect.registerEvents(new MessageListener(this));
+		connect.registerEvents(new SocialSpy());
 		connect.registerEvents(serverSync);
 		server = connect.getSettings().getUsername();
 		getServer().getPluginManager().registerEvents(new PlayerListener(this), this);

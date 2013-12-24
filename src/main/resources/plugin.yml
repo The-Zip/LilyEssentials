@@ -63,6 +63,7 @@ permissions:
       lilyessentials.admin.send: true
       lilyessentials.admin.sendall: true
       lilyessentials.admin.hide: true
+      lilyessentials.admin.socialspy: true
   lilyessentials.admin.chat:
     description: Access to adminChat
     default: op
@@ -92,4 +93,7 @@ permissions:
     default: op
   lilyessentials.admin.hide:
     description: hides the player from messages
+    default: op
+  lilyessentials.admin.socialspy:
+    description: enables socialspy
     default: op

@@ -28,7 +28,7 @@ public class IgnoreCommand implements CommandExecutor
 
                 // Invalid
                 if(args.length <= 0) {
-                        sender.sendMessage(plugin.prefix + ChatColor.RED + "Proper Usage: " + ChatColor.YELLOW + "/ignore [person]");
+                        sender.sendMessage(ChatColor.RED + "Proper Usage: " + ChatColor.YELLOW + "/ignore [person]");
                         return true;
                 }
 
@@ -36,7 +36,7 @@ public class IgnoreCommand implements CommandExecutor
 
                 if (plugin.getServerSync().lookupPlayer(target) == null) 
                 {
-                        sender.sendMessage(plugin.prefix + ChatColor.DARK_RED + "That player isn't around. Did you mistype their name?");
+                        sender.sendMessage(ChatColor.DARK_RED + "That player isn't around. Did you mistype their name?");
                         return true;
                 }
 

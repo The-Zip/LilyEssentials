@@ -1,13 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.bobaccadodl</groupId>
-  <artifactId>lilyessentials</artifactId>
-  <version>1.2</version>
-  <name>LilyEssentials</name>
-  <url>http://www.lilypadmc.org/resources/lilyessentials.7/</url>
-  <description>Essential Commands and Features for LilyPad!</description>
-  
-  <build>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.bobaccadodl</groupId>
+    <artifactId>lilyessentials</artifactId>
+    <version>1.2</version>
+    <name>LilyEssentials</name>
+    <url>http://www.lilypadmc.org/resources/lilyessentials.7/</url>
+    <description>Essential Commands and Features for LilyPad!</description>
+
+    <build>
         <finalName>LilyEssentials</finalName>
         <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
         <resources>
@@ -39,28 +39,28 @@
             </extension>
         </extensions>
     </build>
-  <dependencies>
-    <dependency>
-      <groupId>org.bukkit</groupId>
-        <artifactId>bukkit</artifactId>
-        <version>LATEST</version>
-        <type>jar</type>
-        <scope>compile</scope>
-    </dependency>
-     <dependency>
-        <groupId>lilypad.client.connect</groupId>
-        <artifactId>api</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
-     </dependency>
-  </dependencies>
-  <repositories>
-    <repository>
-      <id>bukkit-repo</id>
-      <url>http://repo.bukkit.org/content/groups/public/</url>
-    </repository>
-    <repository>
-      <id>lilypad</id>
-      <url>http://ci.lilypadmc.org/plugin/repository/everything</url>
-    </repository>
-  </repositories>
+    <dependencies>
+        <dependency>
+            <groupId>org.bukkit</groupId>
+            <artifactId>bukkit</artifactId>
+            <version>LATEST</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>lilypad.client.connect</groupId>
+            <artifactId>api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+    <repositories>
+        <repository>
+            <id>bukkit-repo</id>
+            <url>http://repo.bukkit.org/content/groups/public/</url>
+        </repository>
+        <repository>
+            <id>lilypad</id>
+            <url>http://ci.lilypadmc.org/plugin/repository/everything</url>
+        </repository>
+    </repositories>
 </project>

@@ -96,6 +96,3 @@ permissions:
   lilyessentials.admin.hide:
     description: hides the player from messages
     default: op
-  lilyessentials.admin.socialspy:
-    description: enables socialspy
-    default: op

@@ -35,4 +35,47 @@ public class SendCommand implements CommandExecutor {
 
 		return true;
 	}
+
+    /* (This might be a cleaner, easier way to run this command)
+    / Written by iiHeroo - Horrgs
+    @Override
+    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+        //For commands, <> = required argument, [] = optional, ex for Banning:
+        // /ban iiHeroo - It will use the default ban message if you don't put one.
+
+        if(!(sender instanceof Player)) {
+             sender.sendMessage(ChatColor.RED + "Only in-game player's can use that command!");
+             //This will prevent the console from getting a stacktrace when running the command, you can allow the console to use commands using this tut
+             // http://forums.bukkit.org/threads/tutorial-how-to-create-a-player-console-command-executor.198429/
+             return true;
+        }
+
+        Player p = (Player) sender;
+
+        if(p.hasPermission("lilyessentials.admin.send") {
+           if(args.length != 2) {
+              sender.sendMessage(ChatColor.DARK_RED + "Invalid args!");
+              sender.sendMessage(ChatColor.RED + "Proper Usage: " + ChatColor.YELLOW + "/send <player> <server>");
+           }
+
+           if(args.length == 2) {
+              Player onlinetarget = Bukkit.getServer().getPlayer(args[0]);
+              Strign server = args[1];
+
+              if(onlinetarget != null) {
+                 plugin.reguest("lilyessentials.send"), onlinetarget + "\0" + server);
+              } else {
+                 p.sendMessage(ChatColor.RED + "Player not found!");
+              }
+           }
+        } else {
+            p.sendMessage(ChatColor.RED + "No  permission");
+            return true;
+        }
+
+
+
+
+        return true;
+     */
 }

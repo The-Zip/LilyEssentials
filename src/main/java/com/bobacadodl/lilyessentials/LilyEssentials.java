@@ -34,6 +34,8 @@ public class LilyEssentials extends JavaPlugin {
 	private HashMap<String, String> lastMessaged = new HashMap<String, String>();
 	private ArrayList<String> adminChat = new ArrayList<String>();
 	private ServerSync serverSync;
+    String buildNumber = " Build #4 ";
+    //If your going to commit, change the build number so we know what build the server administrators are using when getting errors.
 
 	public void onEnable() {
 		serverSync = new ServerSync(this);
@@ -45,7 +47,8 @@ public class LilyEssentials extends JavaPlugin {
 		getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
 		config = new LilyEssentialsConfig(this);
 		config.load();
-		log.info(ChatColor.GREEN + "LilyEssentials has been enabled successfully!");
+        log.info(ChatColor.GREEN + "LilyEssentials v1.2" + buildNumber + "is now loading.");
+        log.info(ChatColor.GREEN + "LilyEssentials has been enabled successfully!");
 
 		getCommand("admin").setExecutor(new AdminchatCommand(this));
 		getCommand("alert").setExecutor(new AlertCommand(this));

@@ -33,7 +33,9 @@ commands:
     aliases: [globallist, listall, servers]
     description: Global player list
   ignore:
-    description: Ignore someone
+    description: Ignore someone.
+  hide:
+    description: Hide from the players of the sever.
 permissions:
   lilyesssentials.*:
     description: All LilyEssentials perms

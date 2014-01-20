@@ -60,7 +60,7 @@ public class SendCommand implements CommandExecutor {
 
            if(args.length == 2) {
               Player onlinetarget = Bukkit.getServer().getPlayer(args[0]);
-              Strign server = args[1];
+              String server = args[1];
 
               if(onlinetarget != null) {
                  plugin.reguest("lilyessentials.send"), onlinetarget + "\0" + server);
@@ -70,7 +70,7 @@ public class SendCommand implements CommandExecutor {
            }
         } else {
             p.sendMessage(ChatColor.RED + "No  permission");
-            return true;
+            return false;
         }
 
 

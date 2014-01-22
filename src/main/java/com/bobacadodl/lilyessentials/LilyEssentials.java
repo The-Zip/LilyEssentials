@@ -47,8 +47,8 @@ public class LilyEssentials extends JavaPlugin {
 		getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
 		config = new LilyEssentialsConfig(this);
 		config.load();
-        log.info(ChatColor.GREEN + "LilyEssentials v1.2" + buildNumber + "is now loading.");
-        log.info(ChatColor.GREEN + "LilyEssentials has been enabled successfully!");
+        log.info("LilyEssentials v1.2" + buildNumber + "is now loading.");
+        log.info("LilyEssentials has been enabled successfully!");
 
 		getCommand("admin").setExecutor(new AdminchatCommand(this));
 		getCommand("alert").setExecutor(new AlertCommand(this));
@@ -68,7 +68,7 @@ public class LilyEssentials extends JavaPlugin {
 
 	public void onDisable() {
 		config.save();
-		log.info(ChatColor.GREEN + "LilyEssentials has been disabled and saved!");
+		log.info("LilyEssentials has been disabled and saved!");
 	}
 
 	public void redirectRequest(String server, final Player player) {

@@ -38,7 +38,7 @@ public class DispatchServerCommand implements CommandExecutor {
 		}
 		String command = plugin.wordsToString(1,args);
 
-		command = command.substring(1);
+		String message = plugin.wordsToString(1, args);
 		plugin.request(servers, "lilyessentials.dispatch", command);
 
 		return true;

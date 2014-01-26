@@ -29,6 +29,15 @@ public class MessageListener {
 				ex.printStackTrace();
 			}
 		} 
+		if (event.getChannel().equalsIgnoreCase("lilyessentials.dispatchserver")) {
+			try {
+				String command = event.getMessageAsString();
+				plugin.getServer().dispatchCommand(Bukkit.getConsoleSender(),
+						command);
+			} catch (UnsupportedEncodingException ex) {
+				ex.printStackTrace();
+			}
+		} 
 		if (event.getChannel().equalsIgnoreCase("lilyessentials.alert")) {
 			try {
 				String message = event.getMessageAsString();

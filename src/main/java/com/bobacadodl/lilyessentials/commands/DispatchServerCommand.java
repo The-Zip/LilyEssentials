@@ -9,39 +9,36 @@ import org.bukkit.command.CommandSender;
 
 import com.bobacadodl.lilyessentials.LilyEssentials;
 
-public class DispatchServerCommand implements CommandExecutor {
-
-	private LilyEssentials plugin;
-
-	public DispatchServerCommand(LilyEssentials plugin) {
-		this.plugin = plugin;
-	}
-
+public class DispatchServerCommand implements CommandExecutor{
+	LilyEssentials main;
+	public DispatchServerCommand(LilyEssentials instance){this.main=instance;}
+	
 	@Override
-	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+	public boolean onCommand(CommandSender sender, Command cmd, String label,
+			String[] args) {
+		
+		if(sender.hasPermission("lilyessentials.admin.dispatchserver")){
+			if(args.length>=1){
+				String serverString = args[0];
+				ArrayList<String> servers = new ArrayList<String>();
+				for(String server:serverString.split(",")){
+					servers.add(server);
+				}
+				
+				
+				String command = main.wordsToString(1,args);
 
-		if(!sender.hasPermission("lilyessentials.admin.dispatchserver")) {
-			return false;
-		}
-
-		// Invalid
-		if(args.length <= 0) {
-			sender.sendMessage(ChatColor.DARK_RED + "Invalid args!");
-			sender.sendMessage(ChatColor.RED + "Proper Usage: " + ChatColor.YELLOW + "/dispatchserver [servers] [command]");
+				command.replaceFirst("/", "");
+				main.request(servers, "lilyessentials.dispatch", command);
+			}
+			else{
+				//invalid
+				sender.sendMessage(ChatColor.DARK_RED+"Invalid args!");
+				sender.sendMessage(ChatColor.RED+"Proper Usage: "+ChatColor.YELLOW+"/dispatchserver [servers] [command]");
+			}
 			return true;
 		}
-
-		String serverString = args[0];
-		ArrayList<String> servers = new ArrayList<String>();
-		for(String server : serverString.split(",")) {
-			servers.add(server);
-		}
-		String command = plugin.wordsToString(1,args);
-
-		String message = plugin.wordsToString(1, args);
-		plugin.request(servers, "lilyessentials.dispatch", command);
-
-		return true;
-
+		
+		return false;
 	}
 }

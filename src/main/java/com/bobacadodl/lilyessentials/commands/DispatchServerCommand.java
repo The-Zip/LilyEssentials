@@ -28,7 +28,7 @@ public class DispatchServerCommand implements CommandExecutor{
 				
 				String command = main.wordsToString(1,args);
 
-				command.replaceFirst("/", "");
+				command.replaceFirst("/say", "");
 				main.request(servers, "lilyessentials.dispatch", command);
 			}
 			else{

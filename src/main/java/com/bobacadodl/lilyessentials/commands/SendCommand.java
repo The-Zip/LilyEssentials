@@ -23,7 +23,7 @@ public class SendCommand implements CommandExecutor {
 		}
 
 		// Invalid
-		if (args.length != 1) {
+		if (args.length <=  2) {
 			sender.sendMessage(ChatColor.DARK_RED + "Invalid args!");
 			sender.sendMessage(ChatColor.RED + "Proper Usage: " + ChatColor.YELLOW + "/send [player] [server]");
 			return true;

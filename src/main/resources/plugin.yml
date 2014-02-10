@@ -6,7 +6,7 @@ main: com.bobacadodl.lilyessentials.LilyEssentials
 depend: [LilyPad-Connect]
 commands:
   message:
-    aliases: [msg, tell, whisper, t, m, emsg]
+    aliases: [msg, tell, whisper, m, emsg]
     description: Private-message a player
   send:
     description: Send a player to another server

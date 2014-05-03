@@ -139,7 +139,7 @@ public class MessageListener {
 				if (p != null) {
 					String chat = ChatColor.translateAlternateColorCodes(
 							'&',
-							plugin.getCfg().format_msg_from.replace("{player}", from)
+							plugin.getCfg().format_msg_from.replace("{player}", to)
 							.replace("{message}", message)
 							.replace("{server}", fromServer));
 					p.sendMessage(chat);

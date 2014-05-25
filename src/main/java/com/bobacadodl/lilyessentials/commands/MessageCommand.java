@@ -52,6 +52,9 @@ public class MessageCommand implements CommandExecutor
 		plugin.request("lilyessentials.message", target + "\0"
 				+ sender.getName() + "\0" + message + "\0"
 				+ plugin.getUsername());
+		
+		plugin.request("lilyessentials.spy", target + 
+				"\0" + sender.getName() + "\0" + message);
 
 		return true;
 	}

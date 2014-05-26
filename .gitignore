@@ -10,9 +10,11 @@ tmp/**/*
 local.properties
 .classpath
 .settings/
+target/**
 .loadpath
 ._.DS_Store
 .DS_Store
+.class
 
 # External tool builders
 .externalToolBuilders/

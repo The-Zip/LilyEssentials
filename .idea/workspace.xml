@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb9f45d9-5480-4e40-81cd-b85868dd8092" name="Default" comment="" />
+    <list default="true" id="fb9f45d9-5480-4e40-81cd-b85868dd8092" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/AdminchatCommand.java" afterPath="$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/AdminchatCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/LilyEssentials.java" afterPath="$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/LilyEssentials.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/LilyEssentialsConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/LilyEssentialsConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/MessageCommand.java" afterPath="$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/MessageCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/MessageListener.java" afterPath="$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/MessageListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="LilyEssentials.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,8 +28,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true" converted="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
         <option name="NOTIFY_UNCAUGHT" value="true" />
@@ -55,8 +64,8 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <breakpoint_rules />
-    <ui_properties />
+    <ui_properties converted="true" />
+    <breakpoint_rules converted="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -64,74 +73,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LilyEssentials.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/LilyEssentials.java">
+      <file leaf-file-name="MessageCommand.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/MessageCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="28" selection-start="3442" selection-end="3443" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="2499">
+            <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="969">
+              <caret line="35" column="42" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IgnoreCommand.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/IgnoreCommand.java">
+      <file leaf-file-name="MessageListener.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/MessageListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="13" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="901">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SendAllCommand.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/SendAllCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="39" selection-start="739" selection-end="739" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="748">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SendCommand.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/SendCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="21" selection-start="2239" selection-end="2239" vertical-scroll-proportion="0.52619845" vertical-offset="497" max-vertical-offset="1394">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServerSync.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/ServerSync.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="13" selection-start="662" selection-end="662" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="2448">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="plugin.yml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="127" selection-start="1898" selection-end="1898" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1802">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HideCommand.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/HideCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="13" selection-start="298" selection-end="298" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="799">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GlistCommand.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/GlistCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="36" selection-start="1251" selection-end="1251" vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="952">
-              <folding />
+            <state vertical-scroll-proportion="-3.2142856" vertical-offset="3021" max-vertical-offset="4182">
+              <caret line="185" column="53" selection-start-line="185" selection-start-column="53" selection-end-line="185" selection-end-column="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -139,16 +98,28 @@
       <file leaf-file-name="FindCommand.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/FindCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="21" selection-start="815" selection-end="815" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="867">
+            <state vertical-scroll-proportion="0.0" vertical-offset="164" max-vertical-offset="748">
+              <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AlertCommand.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/AlertCommand.java">
+      <file leaf-file-name="AdminchatCommand.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/AdminchatCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="13" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="714">
+            <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="748">
+              <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plugin.yml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.41098902" vertical-offset="0" max-vertical-offset="1802">
+              <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -174,10 +145,27 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/FindCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/LilyEssentials.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/SendCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/ServerSync.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/LilyEssentials.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/LilyEssentialsConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/MessageListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/MessageCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/AdminchatCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/plugin.yml" />
       </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:\maven" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="MavenProjectNavigator">
@@ -187,14 +175,18 @@
           <option name="myItemId" value="" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
         </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="LilyEssentials" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
       </PATH>
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="1382" />
+    <option name="height" value="754" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -203,14 +195,14 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -222,7 +214,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -238,24 +230,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="LilyEssentials" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LilyEssentials" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LilyEssentials" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -357,7 +331,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -372,12 +346,40 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="false" />
+    <property name="GenerateAntBuildDialog.generateIdeaHomeProperty" value="false" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="LilyEssentials.jar" />
+    <property name="options.lastSelected" value="MavenSettings" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
-      <option name="PROGRAM_PARAMETERS" />
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -386,6 +388,23 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -402,6 +421,7 @@
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -429,6 +449,7 @@
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
@@ -443,6 +464,7 @@
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -462,6 +484,41 @@
       <patterns />
       <method />
     </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
     <list size="0" />
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -469,45 +526,59 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="fb9f45d9-5480-4e40-81cd-b85868dd8092" name="Default" comment="" />
       <created>1389861243573</created>
       <updated>1389861243573</updated>
+      <workItem from="1401118926777" duration="2611000" />
+      <workItem from="1401122679229" duration="1885000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="4496000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977587" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23718888" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24947916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2489019" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21671827" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USERS">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
       <collection />
     </option>
   </component>
@@ -522,346 +593,415 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/LilyEssentials.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="114" selection-start="2119" selection-end="2119" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="2567">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/IgnoreCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="901">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/SendAllCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="39" selection-start="739" selection-end="739" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="748">
+        <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="748">
+          <caret line="27" column="39" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/SendCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="9" selection-start="2516" selection-end="2516" vertical-scroll-proportion="0.0" vertical-offset="1190" max-vertical-offset="1479">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1190" max-vertical-offset="1479">
+          <caret line="70" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/ServerSync.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="13" selection-start="662" selection-end="662" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2448">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2448">
+          <caret line="25" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="127" selection-start="1898" selection-end="1898" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1802">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1802">
+          <caret line="59" column="127" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/HideCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="298" selection-end="298" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="799">
+        <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="799">
+          <caret line="10" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/GlistCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="36" selection-start="1251" selection-end="1251" vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="952">
+        <state vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="952">
+          <caret line="40" column="36" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/FindCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="21" selection-start="815" selection-end="815" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="867">
+        <state vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="867">
+          <caret line="29" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/AlertCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/LilyEssentials.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="114" selection-start="2119" selection-end="2119" vertical-scroll-proportion="0.0" vertical-offset="833" max-vertical-offset="2567">
+        <state vertical-scroll-proportion="0.0" vertical-offset="833" max-vertical-offset="2567">
+          <caret line="49" column="114" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/IgnoreCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="901">
+        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="901">
+          <caret line="9" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/SendAllCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="39" selection-start="739" selection-end="739" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="748">
+        <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="748">
+          <caret line="27" column="39" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/SendCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="9" selection-start="2516" selection-end="2516" vertical-scroll-proportion="0.0" vertical-offset="1190" max-vertical-offset="1479">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1190" max-vertical-offset="1479">
+          <caret line="70" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/ServerSync.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="13" selection-start="662" selection-end="662" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="2448">
+        <state vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="2448">
+          <caret line="25" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="127" selection-start="1898" selection-end="1898" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1802">
+        <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1802">
+          <caret line="59" column="127" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/HideCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="298" selection-end="298" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="799">
+        <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="799">
+          <caret line="10" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/GlistCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="36" selection-start="1251" selection-end="1251" vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="952">
+        <state vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="952">
+          <caret line="40" column="36" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/FindCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="21" selection-start="815" selection-end="815" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="867">
+        <state vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="867">
+          <caret line="29" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/AlertCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="714">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="714">
+          <caret line="9" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/LilyEssentials.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="43" selection-start="1664" selection-end="1664" vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="3077">
+        <state vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="3077">
+          <caret line="42" column="43" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/LilyEssentialsConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="53" selection-end="53" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="408">
+        <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="408">
+          <caret line="2" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/MessageListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="16" selection-start="1423" selection-end="1423" vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="3740">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="3740">
+          <caret line="47" column="16" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/MessageCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="25" selection-start="332" selection-end="332" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="901">
+        <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="901">
+          <caret line="11" column="25" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/UnignoreCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="816">
+        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="816">
+          <caret line="9" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1768">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1768">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/HideCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="298" selection-end="298" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="799">
+        <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="799">
+          <caret line="10" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/GlistCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="36" selection-start="1251" selection-end="1251" vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="952">
+        <state vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="952">
+          <caret line="40" column="36" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/FindCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="21" selection-start="815" selection-end="815" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="867">
+        <state vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="867">
+          <caret line="29" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/AlertCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="714">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="714">
+          <caret line="9" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/Config.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="22" selection-start="752" selection-end="752" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="28" column="22" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/LilyEssentials.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="58" selection-start="1626" selection-end="1626" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="41" column="58" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/IgnoreCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <caret line="9" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/GlistCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="680" max-vertical-offset="952">
+          <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/AlertCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="714">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/UnignoreCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="816">
+          <caret line="9" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="10" selection-start="2448" selection-end="2448" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="22" selection-start="752" selection-end="752" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/LilyEssentialsConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="53" selection-end="53" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/MessageListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="16" selection-start="1423" selection-end="1423" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/GlistCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="36" selection-start="1251" selection-end="1251" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/AlertCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/FindCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="21" selection-start="815" selection-end="815" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/MessageCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="25" selection-start="332" selection-end="332" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/UnignoreCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="816">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/ServerSync.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="13" selection-start="662" selection-end="662" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2108">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/SendAllCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="39" selection-start="739" selection-end="739" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/IgnoreCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/HideCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="298" selection-end="298" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="127" selection-start="1898" selection-end="1898" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1802">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/LilyEssentials.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="28" selection-start="3442" selection-end="3443" vertical-scroll-proportion="0.0" vertical-offset="476" max-vertical-offset="2499">
+        <state vertical-scroll-proportion="0.2113402" vertical-offset="982" max-vertical-offset="1564">
+          <caret line="65" column="10" selection-start-line="65" selection-start-column="10" selection-end-line="65" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/SendCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="21" selection-start="2239" selection-end="2239" vertical-scroll-proportion="0.52619845" vertical-offset="497" max-vertical-offset="1394">
+        <state vertical-scroll-proportion="0.7886598" vertical-offset="51" max-vertical-offset="1360">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/SendAllCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58419245" vertical-offset="0" max-vertical-offset="629">
+          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/IgnoreCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="901">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.416529" vertical-offset="3111" max-vertical-offset="4709">
+          <caret line="112" column="20" selection-start-line="112" selection-start-column="20" selection-end-line="112" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/lilypad/client/connect/api/0.0.1-SNAPSHOT/api-0.0.1-20131116.202503-18.jar!/lilypad/client/connect/api/Connect.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.83793104" vertical-offset="500" max-vertical-offset="1105">
+          <caret line="59" column="47" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/lilypad/client/connect/api/0.0.1-SNAPSHOT/api-0.0.1-20131116.202503-18.jar!/lilypad/client/connect/api/ConnectSettings.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22934233" vertical-offset="0" max-vertical-offset="593">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/bukkit/bukkit/1.7.9-R0.2-SNAPSHOT/bukkit-1.7.9-R0.2-20140515.034156-1.jar!/org/bukkit/command/PluginCommand.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41034484" vertical-offset="0" max-vertical-offset="580">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/LilyEssentialsConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6379691" vertical-offset="0" max-vertical-offset="453">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/MessageListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.2142856" vertical-offset="3021" max-vertical-offset="4182">
+          <caret line="185" column="53" selection-start-line="185" selection-start-column="53" selection-end-line="185" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/LilyEssentials.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.7307693" vertical-offset="1428" max-vertical-offset="2465">
+          <caret line="60" column="52" selection-start-line="60" selection-start-column="52" selection-end-line="60" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/MessageCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="969">
+          <caret line="35" column="42" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/ServerSync.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3325792" vertical-offset="1349" max-vertical-offset="1938">
+          <caret line="116" column="18" selection-start-line="116" selection-start-column="18" selection-end-line="116" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/HideCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4752688" vertical-offset="119" max-vertical-offset="663">
+          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/FindCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="867">
+          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bobacadodl/lilyessentials/commands/AdminchatCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="748">
+          <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/plugin.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41098902" vertical-offset="0" max-vertical-offset="1802">
+          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
           <folding />
         </state>
       </provider>
@@ -954,6 +1094,10 @@
         </settings>
       </state>
     </states>
+  </component>
+  <component name="mavenExecuteGoalHistory">
+    <option value="$PROJECT_DIR$" />
+    <option value="clean install" />
   </component>
 </project>
 

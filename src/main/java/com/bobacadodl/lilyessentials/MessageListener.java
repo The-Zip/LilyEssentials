@@ -139,7 +139,7 @@ public class MessageListener {
 				if (p != null) {
 					String chat = ChatColor.translateAlternateColorCodes(
 							'&',
-							plugin.getCfg().format_msg_from.replace("{player}", to)
+							plugin.getCfg().format_msg_from.replace("{player}", from)
 							.replace("{message}", message)
 							.replace("{server}", fromServer));
 					p.sendMessage(chat);
@@ -186,11 +186,13 @@ public class MessageListener {
 				String[] usermessage = code.split("\0");
 				String user = usermessage[0];
 				String message = usermessage[1];
+                String server = usermessage.length > 2 ? usermessage[2] : plugin.getUsername();
+
 				String chat = ChatColor.translateAlternateColorCodes(
 						'&',
 						plugin.getCfg().format_admin.replace("{player}", user)
 						.replace("{message}", message)
-						.replace("{server}", plugin.getUsername()));
+						.replace("{server}", server));
 				for (Player p : plugin.getServer().getOnlinePlayers()) {
 					if (p.hasPermission("lilyessentials.admin.chat")) {
 						p.sendMessage(chat);

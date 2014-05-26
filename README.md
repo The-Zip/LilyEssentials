@@ -24,7 +24,7 @@ matthijs110 - Helping me out with Jenkins!
 * /find [player] - Find what server a player is on ```lilyessentials.general.find```
 * /send [player] [server] - send a player to a server ```lilyessentials.admin.send```
 * /sendall [server] - send all players to a server ```lilyessentials.admin.sendall```
-* SocialSpy - Keep an eye on every whisper message around the netwokr ```lilyessentials.socialspy```
+* SocialSpy - Keep an eye on every whisper message around the network  ```lilyessentials.socialspy```
 * /hide - hides the player ```lilyessentials.admin.hide```
 
 ### Config

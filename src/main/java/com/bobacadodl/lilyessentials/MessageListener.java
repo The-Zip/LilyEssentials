@@ -166,7 +166,7 @@ public class MessageListener {
 					if(player.hasPermission("lilyessentials.admin.socialspy")) {
 
                         String spy = ChatColor.translateAlternateColorCodes('&',
-                                plugin.getCfg().format_socialspy)
+                                plugin.getCfg().format_socialspy);
 						
 						player.sendMessage(ChatColor.GREEN + spy +
 								ChatColor.GRAY + from + " > " + to + ": " + message

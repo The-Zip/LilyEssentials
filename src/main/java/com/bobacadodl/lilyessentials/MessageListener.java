@@ -156,6 +156,11 @@ public class MessageListener {
 		}
 		if (event.getChannel().equalsIgnoreCase("lilyessentials.spy")) {
 			try {
+				String code = event.getMessageAsString();
+				String[] tofrommessage = code.split("\0");
+				String to = tofrommessage[0];
+				String from = tofrommessage[1];
+				String message = tofrommessage[2];
 				
 				for ( Player player : Bukkit.getServer().getOnlinePlayers() ) {
 					if(player.hasPermission("lilyessentials.admin.socialspy")) {

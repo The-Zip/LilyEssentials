@@ -15,5 +15,5 @@ public class LilyEssentialsConfig extends Config {
 	public String format_glist_line = "    &6{server}: &a({online})";
 	public String format_msg_send = "&a({server}) &7[me -> {player}] &f{message}";
 	public String format_msg_from = "&a({server}) &7[{player} -> me] &f{message}";
-    public String format_socialspy = "&a[Spy]";
+    public String format_socialspy = "&a[Spy] ";
 }

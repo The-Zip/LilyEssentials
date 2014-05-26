@@ -163,7 +163,7 @@ public class MessageListener {
 				String message = tofrommessage[2];
 				
 				for ( Player player : Bukkit.getServer().getOnlinePlayers() ) {
-					if(player.hasPermission("lilyessentials.socialspy")) {
+					if(player.hasPermission("lilyessentials.admin.socialspy")) {
 						
 						player.sendMessage(ChatColor.GREEN + "[Spy] " + 
 								ChatColor.GRAY + from + " > " + to + ": " + message

@@ -37,15 +37,11 @@ public class MessageCommand implements CommandExecutor
 		{
 			sender.sendMessage(ChatColor.DARK_RED + "This player is not online. Did you spell it right?");
 			return true;
-		}		
-
-		//String message = plugin.wordsToString(1, args);
+		}
 		String message = "";
 
         for(int i = 1; i < args.length; i++)
-        {
         	message += (i == args.length - 1) ? args[i] : args[i] + " ";
-        }
 
 		plugin.request("lilyessentials.message", target + "\0"
 				+ sender.getName() + "\0" + message + "\0"

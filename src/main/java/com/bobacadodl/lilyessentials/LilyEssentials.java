@@ -19,6 +19,7 @@ import lilypad.client.connect.api.result.impl.RedirectResult;
 
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.bobacadodl.lilyessentials.commands.*;
@@ -34,12 +35,19 @@ public class LilyEssentials extends JavaPlugin {
 	private HashMap<String, String> lastMessaged = new HashMap<String, String>();
 	private ArrayList<String> adminChat = new ArrayList<String>();
 	private ServerSync serverSync;
-    String buildNumber = " Build #38 ";
+    String buildNumber = "version #40";
     public Object prefix;
-    //If your going to commit, change the build number so we know what build the server administrators are using when getting errors.
 
 	public void onEnable() {
-		serverSync = new ServerSync(this);
+        PluginManager manager = getServer().getPluginManager();
+
+        if(manager.getPlugin("LilyPad-Connect") == null) {
+            log.severe("LilyPad-Connect was not found, disabling plugin.");
+            manager.disablePlugin(this);
+            return;
+        }
+
+        serverSync = new ServerSync(this);
 		getServer().getPluginManager().registerEvents(serverSync, this);
 		connect = getServer().getServicesManager().getRegistration(Connect.class).getProvider();
 		connect.registerEvents(new MessageListener(this));
@@ -48,8 +56,7 @@ public class LilyEssentials extends JavaPlugin {
 		getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
 		config = new LilyEssentialsConfig(this);
 		config.load();
-        log.info("LilyEssentials v1.2" + buildNumber + "is now loading.");
-        log.info("LilyEssentials has been enabled successfully!");
+        log.info("LilyEssentials " + buildNumber + " is now loading.");
 
 		getCommand("admin").setExecutor(new AdminchatCommand(this));
 		getCommand("alert").setExecutor(new AlertCommand(this));

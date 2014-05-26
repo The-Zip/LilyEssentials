@@ -178,12 +178,7 @@ public class MessageListener {
 				String user = usermessage[0];
 				String message = usermessage[1];
                 String server = usermessage.length > 2 ? usermessage[2] : plugin.getUsername();
-
-				String chat = ChatColor.translateAlternateColorCodes(
-						'&',
-						plugin.getCfg().format_admin.replace("{player}", user)
-						.replace("{message}", message)
-						.replace("{server}", server));
+				String chat = ChatColor.translateAlternateColorCodes('&', plugin.getCfg().format_admin.replace("{player}", user).replace("{message}", message).replace("{server}", server));
 				for (Player p : plugin.getServer().getOnlinePlayers()) {
 					if (p.hasPermission("lilyessentials.admin.chat")) {
 						p.sendMessage(chat);
@@ -199,14 +194,7 @@ public class MessageListener {
 				String user = event.getMessageAsString();
 				ArrayList<String> servers = new ArrayList<String>();
 				servers.add(toserver);
-				plugin.request(
-						servers,
-						"lilyessentials.glistreturn",
-						user
-						+ "\0"
-						+ Integer.toString(plugin.getServer()
-								.getOnlinePlayers().length) + "\0"
-								+ plugin.getUsername());
+				plugin.request(servers, "lilyessentials.glistreturn", user + "\0" + Integer.toString(plugin.getServer().getOnlinePlayers().length) + "\0" + plugin.getUsername());
 			} catch (UnsupportedEncodingException ex) {
 				ex.printStackTrace();
 			}
@@ -214,16 +202,10 @@ public class MessageListener {
 		if (event.getChannel().equalsIgnoreCase("lilyessentials.glistreturn")) {
 			try {
 				String code = event.getMessageAsString();
-				String[] useronlineserver = code.split("\0");
-				String user = useronlineserver[0];
-				String online = useronlineserver[1];
-				String server = useronlineserver[2];
-				Player p = Bukkit.getPlayer(user);
-				if (p != null) {
-					String msg = ChatColor.translateAlternateColorCodes('&',
-							plugin.getCfg().format_glist_line.replace("{server}",
-									server).replace("{online}", online));
-					p.sendMessage(msg);
+				String[] args = code.split("\0");
+				if (Bukkit.getPlayer(args[0]) != null) {
+					String msg = ChatColor.translateAlternateColorCodes('&', plugin.getCfg().format_glist_line.replace("{server}", args[2]).replace("{online}", args[1]));
+                    Bukkit.getPlayer(args[0]).sendMessage(msg);
 				}
 			} catch (UnsupportedEncodingException ex) {
 				ex.printStackTrace();

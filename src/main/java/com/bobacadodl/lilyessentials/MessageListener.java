@@ -156,18 +156,13 @@ public class MessageListener {
 		if (event.getChannel().equalsIgnoreCase("lilyessentials.spy")) {
 			try {
 				String code = event.getMessageAsString();
-				String[] tofrommessage = code.split("\0");
-				String to = tofrommessage[0];
-				String from = tofrommessage[1];
-				String message = tofrommessage[2];
-				
+				String[] message = code.split("\0");
 				for ( Player player : Bukkit.getServer().getOnlinePlayers() ) {
-                    if(plugin.getServerSync().isPlayerSpying(player)) {
-                        if(player.hasPermission("lilyessentials.admin.socialspy")) {
-                            if(!player.getName().equalsIgnoreCase(to))
+                    if(player.hasPermission("lilyessentials.admin.socialspy")) {
+                        if(plugin.getServerSync().isPlayerSpying(player)) {
+                            if(player.getName().equalsIgnoreCase(message[0]) || player.getName().equalsIgnoreCase(message[1]))
                                 return;
-                            String spy = ChatColor.translateAlternateColorCodes('&', "&a[LilySpy] &8");
-                            player.sendMessage(spy + from + " > " + to + ": " + message);
+                            player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&a[LilySpy] &8" + message[0] + " > " + message[1] + ": " + message[2]));
                         }
 					}
 				}

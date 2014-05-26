@@ -16,7 +16,8 @@ target/**
 .loadpath
 ._.DS_Store
 .DS_Store
-.class
+*.class
+*.iml
 
 # External tool builders
 .externalToolBuilders/

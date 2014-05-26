@@ -146,14 +146,13 @@ public class MessageListener {
 					plugin.getLastMessaged().put(p.getName(), from);
 					plugin.request("lilyessentials.messagesuccess", p.getName()
 							+ "\0" + from + "\0" + message + "\0" + plugin.getUsername());
-					// main.request("blankmessage",
-					// "from,&7[me -> "+to+"]"+ChatColor.WHITE+message);
 				}
 			} catch (UnsupportedEncodingException ex) {
 				ex.printStackTrace();
 			}
 
 		}
+
 		if (event.getChannel().equalsIgnoreCase("lilyessentials.spy")) {
 			try {
 				String code = event.getMessageAsString();
@@ -163,23 +162,20 @@ public class MessageListener {
 				String message = tofrommessage[2];
 				
 				for ( Player player : Bukkit.getServer().getOnlinePlayers() ) {
-					if(player.hasPermission("lilyessentials.admin.socialspy")) {
-
-                        String spy = ChatColor.translateAlternateColorCodes('&',
-                                plugin.getCfg().format_socialspy);
-						
-						player.sendMessage(ChatColor.GREEN + spy +
-								ChatColor.GRAY + from + " > " + to + ": " + message
-						);
-						
-						//format
-						// [Spy] user1 > user2: Hi.
+                    if(plugin.getServerSync().isPlayerSpying(player)) {
+                        if(player.hasPermission("lilyessentials.admin.socialspy")) {
+                            if(!player.getName().equalsIgnoreCase(to))
+                                return;
+                            String spy = ChatColor.translateAlternateColorCodes('&', "&a[LilySpy] &8");
+                            player.sendMessage(spy + from + " > " + to + ": " + message);
+                        }
 					}
 				}
 			} catch (UnsupportedEncodingException ex) {
 				ex.printStackTrace();
 			}
 		}
+
 		if (event.getChannel().equalsIgnoreCase("lilyessentials.admin")) {
 			try {
 				String code = event.getMessageAsString();

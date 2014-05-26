@@ -1,15 +1,8 @@
 package com.bobacadodl.lilyessentials;
 
 import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.Map.Entry;
-import java.util.Set;
-import java.util.WeakHashMap;
 
 import lilypad.client.connect.api.event.EventListener;
 import lilypad.client.connect.api.event.MessageEvent;
@@ -25,10 +18,11 @@ import com.google.common.collect.Lists;
 
 public class ServerSync implements Runnable, Listener {
 	private LilyEssentials plugin;
-	private Map<String, List<String>> serverPlayers = new HashMap<String, List<String>>();
+	private WeakHashMap<String, List<String>> serverPlayers = new WeakHashMap<String, List<String>>();
 	private Map<String, Long> lastReply = new HashMap<String, Long>();
 
 	private WeakHashMap<Player, Boolean> isHidden = new WeakHashMap<Player, Boolean>();
+    private WeakHashMap<UUID, Boolean> isSpying = new WeakHashMap<UUID, Boolean>();
 
 	public ServerSync(LilyEssentials plugin) {
 		this(plugin, 100L);
@@ -89,25 +83,30 @@ public class ServerSync implements Runnable, Listener {
 		isHidden.remove(event.getPlayer());
 	}
 
-	public void setPlayerHidden(Player player, boolean state) {
-		isHidden.put(player, state);
+	public boolean setPlayerHidden(Player player, boolean state) {
+        isSpying.put(player.getUniqueId(), state);
+        return state;
 	}
+
+    public boolean setPlayerSpying(Player player, Boolean spying) {
+        isSpying.put(player.getUniqueId(), spying);
+        return spying;
+    }
 
 	public boolean isPlayerHidden(Player player) {
-		if(!isHidden.containsKey(player)) {
-			return false;
-		}
-
-		return isHidden.get(player);
+        return (isSpying.containsKey(player.getUniqueId()) ? isSpying.get(player.getUniqueId()) : false);
 	}
 
+    public boolean isPlayerSpying(Player player) {
+        return (isSpying.containsKey(player.getUniqueId()) ? isSpying.get(player.getUniqueId()) : false);
+    }
+
+    public boolean toggleSpying(Player player) {
+        return setPlayerSpying(player, !isPlayerSpying(player));
+    }
+
 	public boolean toggleHidden(Player player) {
-		if(isPlayerHidden(player)) {
-			setPlayerHidden(player, false);
-			return false;
-		}
-		setPlayerHidden(player, true);
-		return true;
+        return setPlayerHidden(player, !isPlayerHidden(player));
 	}
 
 	public List<String> getPlayersOnServer(String server) {

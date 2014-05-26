@@ -32,7 +32,7 @@ public class HideCommand implements CommandExecutor {
 		if(plugin.getServerSync().toggleHidden(player)) {
 			player.sendMessage(ChatColor.YELLOW + "You are now hidden.");
 		} else {
-			player.sendMessage(ChatColor.YELLOW + "You are no loner hidden.");
+			player.sendMessage(ChatColor.YELLOW + "You are no longer hidden.");
 		}
 
 		return true;

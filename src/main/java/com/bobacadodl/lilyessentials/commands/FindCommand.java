@@ -18,9 +18,8 @@ public class FindCommand implements CommandExecutor {
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
-		if (!sender.hasPermission("lilyessentials.general.find")) {
+		if (!sender.hasPermission("lilyessentials.general.find"))
 			return false;
-		}
 
 		// Invalid
 		if (args.length != 1) {

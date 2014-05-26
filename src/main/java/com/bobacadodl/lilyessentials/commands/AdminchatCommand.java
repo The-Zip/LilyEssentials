@@ -25,7 +25,6 @@ public class AdminchatCommand implements CommandExecutor {
 			return false;
 		}
 
-		//toggle admin chat
 		if(args.length <= 0) {
 			if(plugin.getAdminChat().contains(sender.getName())){
 				plugin.getAdminChat().remove(sender.getName());

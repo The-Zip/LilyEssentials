@@ -40,7 +40,7 @@ public class UnignoreCommand implements CommandExecutor
                         return true;
                 }
 
-                // add ignore code here
+                // TODO: add ignore code here
 
                 return true;
         }

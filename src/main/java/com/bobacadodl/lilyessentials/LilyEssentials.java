@@ -64,7 +64,7 @@ public class LilyEssentials extends JavaPlugin {
 		getCommand("send").setExecutor(new SendCommand(this));
 		getCommand("hide").setExecutor(new HideCommand(this));
 		getCommand("ignore").setExecutor(new IgnoreCommand(this));
-		getCommand("ignore").setExecutor(new UnignoreCommand(this));
+        getCommand("lilyspy").setExecutor(new LilySpy(this));
 	}
 
 	public void onDisable() {

@@ -20,7 +20,7 @@ commands:
   alertserver:
     description: MultiServer broadcast
   reply:
-    aliases: [r,repl]
+    aliases: [r,reply]
     description: Reply back to another player
   admin:
     aliases: [a]

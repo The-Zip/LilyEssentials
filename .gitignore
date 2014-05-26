@@ -1,8 +1,12 @@
+#################
+## Eclipse
+#################
+
+*.pydevproject
 .project
 .metadata
-bin/**
-tmp/**
-tmp/**/*
+bin/
+tmp/
 *.tmp
 *.bak
 *.swp
@@ -10,26 +14,17 @@ tmp/**/*
 local.properties
 .classpath
 .settings/
-.idea/**
-.idea/*
-target/**
 .loadpath
-._.DS_Store
-.DS_Store
-*.class
-*.iml
-
-# External tool builders
 .externalToolBuilders/
-
-# Locally stored "Eclipse launch configurations"
 *.launch
-
-# CDT-specific
 .cproject
-
-# PDT-specific
 .buildpath
 
-#maven
+.idea/
 target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+

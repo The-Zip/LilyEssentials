@@ -1,40 +1,39 @@
 package com.bobacadodl.lilyessentials.commands;
 
+import com.bobacadodl.lilyessentials.LilyEssentials;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
-import com.bobacadodl.lilyessentials.LilyEssentials;
-
 public class SendCommand implements CommandExecutor {
-	
-	private LilyEssentials plugin;
 
-	public SendCommand(LilyEssentials plugin) {
-		this.plugin = plugin;
-	}
+    private LilyEssentials plugin;
 
-	@Override
-	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+    public SendCommand(LilyEssentials plugin) {
+        this.plugin = plugin;
+    }
 
-		if (!sender.hasPermission("lilyessentials.admin.send")) {
-			return false;
-		}
+    @Override
+    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
-		// Invalid
-		if (args.length <  2) {
-			sender.sendMessage(ChatColor.DARK_RED + "Invalid args!");
-			sender.sendMessage(ChatColor.RED + "Proper Usage: " + ChatColor.YELLOW + "/send [player] [server]");
-			return true;
-		}
+        if (!sender.hasPermission("lilyessentials.admin.send")) {
+            return false;
+        }
 
-		String player = args[0];
-		String server = args[1];
-		plugin.request("lilyessentials.send", player + "\0" + server);
+        // Invalid
+        if (args.length < 2) {
+            sender.sendMessage(ChatColor.DARK_RED + "Invalid args!");
+            sender.sendMessage(ChatColor.RED + "Proper Usage: " + ChatColor.YELLOW + "/send [player] [server]");
+            return true;
+        }
 
-		return true;
-	}
+        String player = args[0];
+        String server = args[1];
+        plugin.request("lilyessentials.send", player + "\0" + server);
+
+        return true;
+    }
 
     /* (This might be a cleaner, easier way to run this command)
     / Written by iiHeroo - Horrgs

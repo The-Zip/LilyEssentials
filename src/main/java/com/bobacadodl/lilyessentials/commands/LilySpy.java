@@ -16,16 +16,15 @@ import org.bukkit.entity.Player;
 public class LilySpy implements CommandExecutor {
     private LilyEssentials plugin;
 
-    public LilySpy(LilyEssentials plugin)
-    {
+    public LilySpy(LilyEssentials plugin) {
         this.plugin = plugin;
     }
 
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
-        if(!(commandSender instanceof Player))
+        if (!(commandSender instanceof Player))
             return true;
-        if(command.getName().equalsIgnoreCase("lilyspy")) {
+        if (command.getName().equalsIgnoreCase("lilyspy")) {
             final Player player = (Player) commandSender;
             player.sendMessage(ChatColor.translateAlternateColorCodes('&', (plugin.getServerSync().isPlayerSpying(player) ? "&cLilySpy disabled." : "&aLilySpy enabled.")));
             plugin.getServerSync().toggleSpying(player);

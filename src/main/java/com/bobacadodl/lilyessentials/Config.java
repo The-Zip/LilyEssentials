@@ -1,12 +1,5 @@
 package com.bobacadodl.lilyessentials;
 
-import java.io.File;
-import java.lang.reflect.Field;
-import java.lang.reflect.Modifier;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
-
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.World;
@@ -17,12 +10,19 @@ import org.bukkit.plugin.Plugin;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
+import java.io.File;
+import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
 /**
  * Inspired by md_5
- * 
+ * <p/>
  * An awesome super-duper-lazy Config lib!
  * Just extend it, set some (non-static) variables
- * 
+ *
  * @author codename_B
  * @version 2.1
  */
@@ -30,34 +30,35 @@ public abstract class Config {
 
     private transient File file = null;
     private transient YamlConfiguration conf = new YamlConfiguration();
-    
+
     /**
      * Must be called before using config.load() or config.save();
+     *
      * @param input
      * @return (Config) instance
      */
     public Config setFile(Object input) {
         // handle the File
-        if(input == null) {
+        if (input == null) {
             new InvalidConfigurationException("File cannot be null!").printStackTrace();
-        } else if(input instanceof File) {
+        } else if (input instanceof File) {
             // the file, directly
             file = (File) input;
-        } else if(input instanceof Plugin) {
+        } else if (input instanceof Plugin) {
             // the config.yml of the plugin
             file = getFile((Plugin) input);
-        } else if(input instanceof String) {
+        } else if (input instanceof String) {
             // the literal file from the string
             file = new File((String) input);
         }
         return this;
     }
-    
+
     /**
      * Lazy load
      */
     public void load() {
-        if(file != null) {
+        if (file != null) {
             try {
                 onLoad(file);
             } catch (Exception e) {
@@ -67,12 +68,12 @@ public abstract class Config {
             new InvalidConfigurationException("File cannot be null!").printStackTrace();
         }
     }
-    
+
     /**
      * Lazy save
      */
     public void save() {
-        if(file != null) {
+        if (file != null) {
             try {
                 onSave(file);
             } catch (Exception e) {
@@ -82,24 +83,26 @@ public abstract class Config {
             new InvalidConfigurationException("File cannot be null!").printStackTrace();
         }
     }
-    
+
     /**
      * Internal method - used by load( );
+     *
      * @param plugin
      * @throws Exception
      */
     private void onLoad(File file) throws Exception {
-        if(!file.exists()) {
-            if(file.getParentFile() != null)
+        if (!file.exists()) {
+            if (file.getParentFile() != null)
                 file.getParentFile().mkdirs();
             file.createNewFile();
         }
         conf.load(file);
-        for(Field field : getClass().getDeclaredFields()) {
+        for (Field field : getClass().getDeclaredFields()) {
             String path = field.getName().replaceAll("_", ".");
-            if(doSkip(field)) {
+            if (doSkip(field)) {
                 // don't touch it
-            } if(conf.isSet(path)) {
+            }
+            if (conf.isSet(path)) {
                 field.set(this, toBukkit(conf.get(path), field, path));
             } else {
                 conf.set(path, toConfig(field.get(this), field, path));
@@ -107,21 +110,22 @@ public abstract class Config {
         }
         conf.save(file);
     }
-    
+
     /**
      * Internal method - used by save();
+     *
      * @param plugin
      * @throws Exception
      */
     private void onSave(File file) throws Exception {
-        if(!file.exists()) {
-            if(file.getParentFile() != null)
+        if (!file.exists()) {
+            if (file.getParentFile() != null)
                 file.getParentFile().mkdirs();
             file.createNewFile();
         }
-        for(Field field : getClass().getDeclaredFields()) {
+        for (Field field : getClass().getDeclaredFields()) {
             String path = field.getName().replaceAll("_", ".");
-            if(doSkip(field)) {
+            if (doSkip(field)) {
                 // don't touch it
             } else {
                 conf.set(path, toConfig(field.get(this), field, path));
@@ -133,22 +137,22 @@ public abstract class Config {
     /*
      * Main conversion methods
      */
-    
+
     private Object toBukkit(Object in, Field field, String path) throws Exception {
-        if(isConfigurationSection(in)) {
+        if (isConfigurationSection(in)) {
             return getMap((ConfigurationSection) in, field, path);
-        } else if(isJSON(in)) {
+        } else if (isJSON(in)) {
             return getLocation((String) in);
         } else {
             return in;
         }
     }
-    
+
     @SuppressWarnings("rawtypes")
     private Object toConfig(Object out, Field field, String path) throws Exception {
-        if(isMap(out)) {
+        if (isMap(out)) {
             return getMap((Map) out, field, path);
-        } else if(isLocation(out)) {
+        } else if (isLocation(out)) {
             return getLocation((Location) out);
         } else {
             return out;
@@ -158,12 +162,12 @@ public abstract class Config {
     /*
      * Checkers
      */
-    
+
     private boolean isJSON(Object o) {
         try {
-            if(o instanceof String) {
+            if (o instanceof String) {
                 String s = (String) o;
-                if(s.startsWith("{")) {
+                if (s.startsWith("{")) {
                     return new JSONParser().parse(s) != null;
                 }
             }
@@ -172,7 +176,7 @@ public abstract class Config {
             return false;
         }
     }
-    
+
     @SuppressWarnings("rawtypes")
     private boolean isMap(Object o) {
         try {
@@ -181,7 +185,7 @@ public abstract class Config {
             return false;
         }
     }
-    
+
     private boolean isLocation(Object o) {
         try {
             return (Location) o != null;
@@ -189,7 +193,7 @@ public abstract class Config {
             return false;
         }
     }
-    
+
     private boolean isConfigurationSection(Object o) {
         try {
             return (ConfigurationSection) o != null;
@@ -201,13 +205,13 @@ public abstract class Config {
     /*
      * Converters
      */
-    
-    @SuppressWarnings({ "rawtypes", "unchecked" })
+
+    @SuppressWarnings({"rawtypes", "unchecked"})
     private ConfigurationSection getMap(Map data, Field field, String path) throws Exception {
         ConfigurationSection cs = conf.createSection(path);
         Set<String> keys = data.keySet();
-        if(keys != null && keys.size() > 0) {
-            for(String key : keys) {
+        if (keys != null && keys.size() > 0) {
+            for (String key : keys) {
                 System.out.println("keys");
                 Object out = data.get(key);
                 System.out.println(out.getClass().getName());
@@ -219,13 +223,13 @@ public abstract class Config {
         }
         return cs;
     }
-    
-    @SuppressWarnings({ "rawtypes", "unchecked" })
+
+    @SuppressWarnings({"rawtypes", "unchecked"})
     private Map getMap(ConfigurationSection data, Field field, String path) throws Exception {
         Set<String> keys = data.getKeys(false);
         Map map = new HashMap();
-        if(keys != null && keys.size() > 0) {
-            for(String key : keys) {
+        if (keys != null && keys.size() > 0) {
+            for (String key : keys) {
                 Object in = data.get(key);
                 in = toBukkit(in, field, path);
                 map.put(key, in);
@@ -234,7 +238,7 @@ public abstract class Config {
         }
         return map;
     }
-    
+
     private Location getLocation(String json) throws Exception {
         JSONObject data = (JSONObject) new JSONParser().parse(json);
         // world
@@ -252,7 +256,7 @@ public abstract class Config {
         loc.setYaw(yaw);
         return loc;
     }
-    
+
     @SuppressWarnings("unchecked")
     private String getLocation(Location loc) {
         JSONObject data = new JSONObject();
@@ -271,18 +275,19 @@ public abstract class Config {
     /*
      * Utility methods
      */
-    
+
     /**
      * A little internal method to save re-using code
+     *
      * @param field
      * @return skip
      */
     private boolean doSkip(Field field) {
         return Modifier.isTransient(field.getModifiers()) || Modifier.isStatic(field.getModifiers()) || Modifier.isFinal(field.getModifiers());
     }
-    
+
     private File getFile(Plugin plugin) {
         return new File(plugin.getDataFolder(), "config.yml");
     }
-    
+
 }

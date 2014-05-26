@@ -164,8 +164,11 @@ public class MessageListener {
 				
 				for ( Player player : Bukkit.getServer().getOnlinePlayers() ) {
 					if(player.hasPermission("lilyessentials.admin.socialspy")) {
+
+                        String spy = ChatColor.translateAlternateColorCodes('&',
+                                plugin.getCfg().format_socialspy)
 						
-						player.sendMessage(ChatColor.GREEN + "[Spy] " + 
+						player.sendMessage(ChatColor.GREEN + spy +
 								ChatColor.GRAY + from + " > " + to + ": " + message
 						);
 						

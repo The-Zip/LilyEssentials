@@ -14,6 +14,7 @@ import lilypad.client.connect.api.result.impl.MessageResult;
 import lilypad.client.connect.api.result.impl.RedirectResult;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
+import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -37,8 +38,19 @@ public class LilyEssentials extends JavaPlugin {
     public void onEnable() {
         PluginManager manager = getServer().getPluginManager();
 
-        if (manager.getPlugin("LilyPad-Connect") == null) {
-            log.severe("LilyPad-Connect was not found, disabling plugin.");
+        PluginDescriptionFile pluginDescriptionFile = this.getDescription();
+
+        boolean foundDependencies = true;
+
+        for(String p : pluginDescriptionFile.getDepend()) {
+            if(manager.getPlugin(p) == null) {
+                log.severe(String.format("Could not find \"%s\".", p));
+                foundDependencies = false;
+            }
+        }
+
+        if (foundDependencies) {
+            log.severe("LilyEssentials has been disabled.");
             manager.disablePlugin(this);
             return;
         }

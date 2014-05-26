@@ -10,7 +10,6 @@ tmp/**/*
 local.properties
 .classpath
 .settings/
-.idea/
 target/**
 .loadpath
 ._.DS_Store

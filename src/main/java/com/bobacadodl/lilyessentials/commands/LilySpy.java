@@ -25,13 +25,9 @@ public class LilySpy implements CommandExecutor {
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
         if(!(commandSender instanceof Player))
             return true;
-
         if(command.getName().equalsIgnoreCase("lilyspy")) {
             final Player player = (Player) commandSender;
-            if(plugin.getServerSync().isPlayerSpying(player))
-                player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&cLilySpy Disabled."));
-            else
-                player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&aLilySpy Enabled."));
+            player.sendMessage(ChatColor.translateAlternateColorCodes('&', (plugin.getServerSync().isPlayerSpying(player) ? "&cLilySpy disabled." : "&aLilySpy enabled.")));
             plugin.getServerSync().toggleSpying(player);
             return true;
         }

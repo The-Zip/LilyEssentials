@@ -21,10 +21,8 @@ public class MessageCommand implements CommandExecutor
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) 
 	{
 
-		if (!sender.hasPermission("lilyessentials.general.message")) 
-		{
+		if (!sender.hasPermission("lilyessentials.general.message"))
 			return false;
-		}
 
 		// Invalid
 		if (args.length <= 1) 

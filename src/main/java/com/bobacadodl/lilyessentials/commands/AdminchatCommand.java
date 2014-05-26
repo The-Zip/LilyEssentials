@@ -6,6 +6,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
 import com.bobacadodl.lilyessentials.LilyEssentials;
+import org.bukkit.entity.Player;
 
 public class AdminchatCommand implements CommandExecutor {
 
@@ -17,6 +18,8 @@ public class AdminchatCommand implements CommandExecutor {
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+        if(!(sender instanceof Player))
+            return false;
 
 		if(!sender.hasPermission("lilyessentials.admin.chat")) {
 			return false;
@@ -34,8 +37,8 @@ public class AdminchatCommand implements CommandExecutor {
 			return true;
 		}
 
-		String message = plugin.wordsToString(0,args);
-		plugin.request("lilyessentials.admin", sender.getName() + "\0" + message);
+		String message = plugin.wordsToString(0, args);
+		plugin.request("lilyessentials.admin", sender.getName() + "\0" + message + "\0" + plugin.getServerSync().lookupPlayer(sender.getName()));
 
 		return true;
 	}

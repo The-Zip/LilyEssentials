@@ -1,7 +1,7 @@
 name: LilyEssentials
 version: 1.2
 description: Essential Commands and Features for LilyPad!
-authors: [The_Zip, Matthijs110, Tzeentchful, shawshark, Horrgs]
+authors: [The_Zip, Matthijs110, Tzeentchful, shawshark, Horrgs, charries96]
 main: com.bobacadodl.lilyessentials.LilyEssentials
 depend: [LilyPad-Connect]
 commands:
@@ -20,7 +20,7 @@ commands:
   alertserver:
     description: MultiServer broadcast
   reply:
-    aliases: [r,reply]
+    aliases: [r,repl]
     description: Reply back to another player
   admin:
     aliases: [a]

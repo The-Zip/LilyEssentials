@@ -35,6 +35,7 @@ public class LilyEssentials extends JavaPlugin {
 	private ArrayList<String> adminChat = new ArrayList<String>();
 	private ServerSync serverSync;
     String buildNumber = " Build #20 ";
+    public Object prefix;
     //If your going to commit, change the build number so we know what build the server administrators are using when getting errors.
 
 	public void onEnable() {

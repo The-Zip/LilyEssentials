@@ -29,7 +29,7 @@ public class MessageCommand implements CommandExecutor
 		// Invalid
 		if (args.length <= 1) 
 		{
-			sender.sendMessage(plugin.prefix + ChatColor.RED + "Proper Usage: " + ChatColor.YELLOW + "/msg [player] [message]");
+			sender.sendMessage(ChatColor.RED + "Proper Usage: " + ChatColor.YELLOW + "/msg [player] [message]");
 			return true;
 		}
 
@@ -37,23 +37,23 @@ public class MessageCommand implements CommandExecutor
 
 		if (plugin.getServerSync().lookupPlayer(target) == null) 
 		{
-			sender.sendMessage(plugin.prefix + ChatColor.DARK_RED + "This player is not online. Did you spell it right?");
+			sender.sendMessage(ChatColor.DARK_RED + "This player is not online. Did you spell it right?");
 			return true;
 		}		
 
 		//String message = plugin.wordsToString(1, args);
 		String message = "";
-        
+
         for(int i = 1; i < args.length; i++)
         {
         	message += (i == args.length - 1) ? args[i] : args[i] + " ";
         }
-        
+
 		plugin.request("lilyessentials.message", target + "\0"
 				+ sender.getName() + "\0" + message + "\0"
 				+ plugin.getUsername());
-		
-		plugin.request("lilyessentials.spy", target + 
+
+		plugin.request("lilyessentials.spy", target +
 				"\0" + sender.getName() + "\0" + message);
 
 		return true;

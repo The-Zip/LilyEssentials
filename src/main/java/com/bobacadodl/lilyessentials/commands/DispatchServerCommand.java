@@ -7,6 +7,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class DispatchServerCommand implements CommandExecutor {
     LilyEssentials main;
@@ -23,14 +24,11 @@ public class DispatchServerCommand implements CommandExecutor {
             if (args.length >= 1) {
                 String serverString = args[0];
                 ArrayList<String> servers = new ArrayList<String>();
-                for (String server : serverString.split(",")) {
-                    servers.add(server);
-                }
+                Collections.addAll(servers, serverString.split(","));
 
 
                 String command = main.wordsToString(1, args);
-
-                command.replaceFirst("/", "");
+                command = command.replaceFirst("/", "");
                 main.request(servers, "lilyessentials.dispatch", command);
             } else {
                 //invalid

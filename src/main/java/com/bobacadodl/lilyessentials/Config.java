@@ -31,12 +31,6 @@ public abstract class Config {
     private transient File file = null;
     private transient YamlConfiguration conf = new YamlConfiguration();
 
-    /**
-     * Must be called before using config.load() or config.save();
-     *
-     * @param input
-     * @return (Config) instance
-     */
     public Config setFile(Object input) {
         // handle the File
         if (input == null) {
@@ -84,12 +78,7 @@ public abstract class Config {
         }
     }
 
-    /**
-     * Internal method - used by load( );
-     *
-     * @param plugin
-     * @throws Exception
-     */
+    @SuppressWarnings("ResultOfMethodCallIgnored")
     private void onLoad(File file) throws Exception {
         if (!file.exists()) {
             if (file.getParentFile() != null)
@@ -99,6 +88,7 @@ public abstract class Config {
         conf.load(file);
         for (Field field : getClass().getDeclaredFields()) {
             String path = field.getName().replaceAll("_", ".");
+            //noinspection StatementWithEmptyBody
             if (doSkip(field)) {
                 // don't touch it
             }
@@ -111,12 +101,7 @@ public abstract class Config {
         conf.save(file);
     }
 
-    /**
-     * Internal method - used by save();
-     *
-     * @param plugin
-     * @throws Exception
-     */
+    @SuppressWarnings("StatementWithEmptyBody")
     private void onSave(File file) throws Exception {
         if (!file.exists()) {
             if (file.getParentFile() != null)
@@ -180,7 +165,7 @@ public abstract class Config {
     @SuppressWarnings("rawtypes")
     private boolean isMap(Object o) {
         try {
-            return (Map) o != null;
+            return o != null;
         } catch (Exception e) {
             return false;
         }
@@ -188,7 +173,7 @@ public abstract class Config {
 
     private boolean isLocation(Object o) {
         try {
-            return (Location) o != null;
+            return o != null;
         } catch (Exception e) {
             return false;
         }
@@ -196,7 +181,7 @@ public abstract class Config {
 
     private boolean isConfigurationSection(Object o) {
         try {
-            return (ConfigurationSection) o != null;
+            return o != null;
         } catch (Exception e) {
             return false;
         }
@@ -210,7 +195,7 @@ public abstract class Config {
     private ConfigurationSection getMap(Map data, Field field, String path) throws Exception {
         ConfigurationSection cs = conf.createSection(path);
         Set<String> keys = data.keySet();
-        if (keys != null && keys.size() > 0) {
+        if (keys.size() > 0) {
             for (String key : keys) {
                 System.out.println("keys");
                 Object out = data.get(key);
@@ -271,17 +256,7 @@ public abstract class Config {
         data.put("yaw", String.valueOf(loc.getYaw()));
         return data.toJSONString();
     }
-    
-    /*
-     * Utility methods
-     */
 
-    /**
-     * A little internal method to save re-using code
-     *
-     * @param field
-     * @return skip
-     */
     private boolean doSkip(Field field) {
         return Modifier.isTransient(field.getModifiers()) || Modifier.isStatic(field.getModifiers()) || Modifier.isFinal(field.getModifiers());
     }

@@ -19,7 +19,7 @@ public class ServerSync implements Runnable, Listener {
     private WeakHashMap<String, List<String>> serverPlayers = new WeakHashMap<String, List<String>>();
     private Map<String, Long> lastReply = new HashMap<String, Long>();
 
-    private WeakHashMap<Player, Boolean> isHidden = new WeakHashMap<Player, Boolean>();
+    private WeakHashMap<UUID, Boolean> isHidden = new WeakHashMap<UUID, Boolean>();
     private WeakHashMap<UUID, Boolean> isSpying = new WeakHashMap<UUID, Boolean>();
 
     public ServerSync(LilyEssentials plugin) {
@@ -33,25 +33,22 @@ public class ServerSync implements Runnable, Listener {
 
     @Override
     public void run() {
-
         Iterator<Entry<String, Long>> replys = lastReply.entrySet().iterator();
         while (replys.hasNext()) {
             Entry<String, Long> reply = replys.next();
-            if ((reply.getValue() + 8000) < System.currentTimeMillis()) {
+            if ((reply.getValue() + 10000) < System.currentTimeMillis()) {
                 replys.remove();
                 serverPlayers.remove(reply.getKey());
             }
         }
-        //Run through all the players that aren't hidden and send a message
         StringBuilder builder = new StringBuilder();
         builder.append(plugin.getUsername());
         builder.append("\0");
         Iterator<Player> players = Arrays.asList(Bukkit.getOnlinePlayers()).iterator();
         while (players.hasNext()) {
             Player current = players.next();
-            if (isPlayerHidden(current)) {
+            if (isPlayerHidden(current))
                 continue;
-            }
             builder.append(current.getName());
             if (players.hasNext()) {
                 builder.append("\0");
@@ -67,7 +64,7 @@ public class ServerSync implements Runnable, Listener {
                 String[] split = event.getMessageAsString().split("\0");
                 String server = split[0];
                 List<String> players = Lists.newArrayList(split);
-                players.remove(0); //remove the server name from the list
+                players.remove(0);
                 serverPlayers.put(server, players);
                 lastReply.put(server, System.currentTimeMillis());
             } catch (UnsupportedEncodingException e) {
@@ -78,7 +75,10 @@ public class ServerSync implements Runnable, Listener {
 
     @EventHandler
     public void onDisconnect(PlayerQuitEvent event) {
-        isHidden.remove(event.getPlayer());
+        if(isHidden.containsKey(event.getPlayer().getUniqueId()))
+            isHidden.remove(event.getPlayer().getUniqueId());
+        if(isSpying.containsKey(event.getPlayer().getUniqueId()))
+            isSpying.remove(event.getPlayer().getUniqueId());
     }
 
     public boolean setPlayerHidden(Player player, boolean state) {

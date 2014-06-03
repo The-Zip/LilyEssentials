@@ -3,15 +3,9 @@ package com.bobacadodl.lilyessentials;
 import com.bobacadodl.lilyessentials.commands.*;
 import lilypad.client.connect.api.Connect;
 import lilypad.client.connect.api.request.RequestException;
-import lilypad.client.connect.api.request.impl.GetPlayersRequest;
-import lilypad.client.connect.api.request.impl.MessageRequest;
-import lilypad.client.connect.api.request.impl.RedirectRequest;
-import lilypad.client.connect.api.result.FutureResult;
-import lilypad.client.connect.api.result.FutureResultListener;
-import lilypad.client.connect.api.result.StatusCode;
-import lilypad.client.connect.api.result.impl.GetPlayersResult;
-import lilypad.client.connect.api.result.impl.MessageResult;
-import lilypad.client.connect.api.result.impl.RedirectResult;
+import lilypad.client.connect.api.request.impl.*;
+import lilypad.client.connect.api.result.*;
+import lilypad.client.connect.api.result.impl.*;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginDescriptionFile;
@@ -26,8 +20,7 @@ import java.util.logging.Logger;
 public class LilyEssentials extends JavaPlugin {
 
     public Logger log = Logger.getLogger("Minecraft");
-    public Object prefix;
-    String buildNumber = "version #40";
+    String buildNumber = "#40";
     private Connect connect;
     private LilyEssentialsConfig config;
     private String server;
@@ -57,14 +50,19 @@ public class LilyEssentials extends JavaPlugin {
 
         serverSync = new ServerSync(this);
         getServer().getPluginManager().registerEvents(serverSync, this);
-        connect = getServer().getServicesManager().getRegistration(Connect.class).getProvider();
-        connect.registerEvents(new MessageListener(this));
-        connect.registerEvents(serverSync);
-        server = connect.getSettings().getUsername();
+        try {
+            connect = getServer().getServicesManager().getRegistration(Connect.class).getProvider();
+            connect.registerEvents(new MessageListener(this));
+            connect.registerEvents(serverSync);
+            server = connect.getSettings().getUsername();
+        } catch (Exception ex) {
+            getLogger().info("Unable to reach Connect proxy.");
+        }
+
         getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
         config = new LilyEssentialsConfig(this);
         config.load();
-        log.info("LilyEssentials " + buildNumber + " is now loading.");
+        log.info("Starting LilyEssentials build " + buildNumber + ".");
 
         getCommand("dispatchserver").setExecutor(new DispatchServerCommand(this));
         getCommand("alertserver").setExecutor(new AlertServerCommand(this));
@@ -79,7 +77,6 @@ public class LilyEssentials extends JavaPlugin {
         getCommand("find").setExecutor(new FindCommand(this));
         getCommand("send").setExecutor(new SendCommand(this));
         getCommand("hide").setExecutor(new HideCommand(this));
-        getCommand("lilyspy").setExecutor(new LilySpy(this));
     }
 
     public void onDisable() {
@@ -133,19 +130,8 @@ public class LilyEssentials extends JavaPlugin {
         }
         try {
             FutureResult<MessageResult> futureResult = connect.request(request);
-            /*
-			 * futureResult. futureResult.registerListener(new
-			 * FutureResultListener<MessageResult>(){
-			 * 
-			 * @Override public void onResult(MessageResult messageResult) {
-			 * return messageResult.getStatusCode()==StatusCode.SUCCESS; } });
-			 */
-            MessageResult messageResult = futureResult.await(100L);
-            if (messageResult != null) {
-                return messageResult.getStatusCode() == StatusCode.SUCCESS;
-            } else {
-                return false;
-            }
+            MessageResult messageResult = futureResult.await(60L);
+            return messageResult != null && messageResult.getStatusCode() == StatusCode.SUCCESS;
         } catch (RequestException e) {
             e.printStackTrace();
             return false;
@@ -157,15 +143,10 @@ public class LilyEssentials extends JavaPlugin {
 
     public String wordsToString(int start, String[] words) {
         StringBuilder builder = new StringBuilder();
-        for (String word : words) {
-            builder.append(word);
-            builder.append(" ");
+        for(int i = start; i < words.length; i++) {
+            builder.append(words[i - 1]);
         }
         return builder.toString().trim();
-    }
-
-    public Connect getConnect() {
-        return connect;
     }
 
     public LilyEssentialsConfig getCfg() {

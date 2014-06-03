@@ -7,6 +7,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class AlertServerCommand implements CommandExecutor {
 
@@ -32,9 +33,7 @@ public class AlertServerCommand implements CommandExecutor {
 
         String serverString = args[0];
         ArrayList<String> servers = new ArrayList<String>();
-        for (String server : serverString.split(",")) {
-            servers.add(server);
-        }
+        Collections.addAll(servers, serverString.split(","));
 
         String message = plugin.wordsToString(1, args);
         plugin.request(servers, "lilyessentials.alert", message);

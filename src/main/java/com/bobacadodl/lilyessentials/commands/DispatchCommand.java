@@ -29,7 +29,7 @@ public class DispatchCommand implements CommandExecutor {
         }
 
         String command = plugin.wordsToString(0, args);
-        command.replaceFirst("/", "");
+        command = command.replaceFirst("/", "");
         plugin.request("lilyessentials.dispatch", command);
 
         return true;

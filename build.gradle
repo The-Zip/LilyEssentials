@@ -1,0 +1,19 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+sourceCompatibility = 1.6
+version = '1.0'
+project.group = 'com.bobacadodl.lilyessentials'
+
+repositories {
+    mavenCentral()
+    maven { url 'http://repo.bukkit.org/content/groups/public/' }
+    maven { url 'http://ci.lilypadmc.org/plugin/repository/everything' }
+}
+
+dependencies {
+    compile 'org.bukkit:bukkit:1.7.9-R0.2-SNAPSHOT'
+    compile 'org.bukkit:craftbukkit:1.7.9-R0.2-SNAPSHOT'
+    compile 'lilypad.client.connect:api:0.0.1-SNAPSHOT'
+    testCompile group: 'junit', name: 'junit', version: '4.+'
+}

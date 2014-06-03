@@ -44,14 +44,12 @@ public class MessageListener {
                 String[] fromto = code.split("\0");
                 String from = fromto[0];
                 String tofind = fromto[1];
-                Player p = plugin.getServer().getPlayer(tofind);
+                @SuppressWarnings("deprecation") Player p = plugin.getServer().getPlayer(tofind);
                 if (p != null) {
                     // return the player
                     plugin.request("lilyessentials.blankmessage", from + "\0&6&n"
                             + p.getName() + ChatColor.YELLOW
                             + " is on server: &3" + plugin.getUsername());
-                } else {
-
                 }
             } catch (UnsupportedEncodingException ex) {
                 ex.printStackTrace();
@@ -154,24 +152,6 @@ public class MessageListener {
 
         }
 
-        if (event.getChannel().equalsIgnoreCase("lilyessentials.spy")) {
-            try {
-                String code = event.getMessageAsString();
-                String[] message = code.split("\0");
-                for (Player player : Bukkit.getServer().getOnlinePlayers()) {
-                    if (player.hasPermission("lilyessentials.admin.socialspy")) {
-                        if (plugin.getServerSync().isPlayerSpying(player)) {
-                            if (player.getName().equalsIgnoreCase(message[0]) || player.getName().equalsIgnoreCase(message[1]))
-                                return;
-                            player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&a[LilySpy] &8" + message[0] + " > " + message[1] + ": " + message[2]));
-                        }
-                    }
-                }
-            } catch (UnsupportedEncodingException ex) {
-                ex.printStackTrace();
-            }
-        }
-
         if (event.getChannel().equalsIgnoreCase("lilyessentials.admin")) {
             try {
                 String code = event.getMessageAsString();
@@ -200,6 +180,7 @@ public class MessageListener {
                 ex.printStackTrace();
             }
         }
+
         if (event.getChannel().equalsIgnoreCase("lilyessentials.glistreturn")) {
             try {
                 String code = event.getMessageAsString();

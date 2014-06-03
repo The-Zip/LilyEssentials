@@ -30,5 +30,4 @@ release.properties
 hs_err_pid*
 
 # IntelliJ IDEA
-#.idea/
-.idea.bk/
+.idea/

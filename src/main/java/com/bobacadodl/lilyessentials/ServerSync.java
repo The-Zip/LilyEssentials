@@ -1,26 +1,17 @@
 package com.bobacadodl.lilyessentials;
 
-import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-import java.util.WeakHashMap;
-
+import com.google.common.collect.Lists;
 import lilypad.client.connect.api.event.EventListener;
 import lilypad.client.connect.api.event.MessageEvent;
-
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerQuitEvent;
 
-import com.google.common.collect.Lists;
+import java.io.UnsupportedEncodingException;
+import java.util.*;
+import java.util.Map.Entry;
 
 
 public class ServerSync implements Runnable, Listener {
@@ -54,7 +45,7 @@ public class ServerSync implements Runnable, Listener {
 		StringBuilder builder = new StringBuilder(); 
 		builder.append(plugin.getUsername());
 		builder.append("\0");
-		Iterator<Player> players = Arrays.asList(Bukkit.getOnlinePlayers()).iterator();
+		Iterator<? extends Player> players = Bukkit.getOnlinePlayers().iterator();
 		while(players.hasNext()) {
 			Player current = players.next();
 			if(isPlayerHidden(current)) {

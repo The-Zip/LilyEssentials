@@ -1,14 +1,13 @@
 package com.bobacadodl.lilyessentials;
 
-import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
-
 import lilypad.client.connect.api.event.EventListener;
 import lilypad.client.connect.api.event.MessageEvent;
-
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
+
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
 
 public class MessageListener {
 	
@@ -214,7 +213,7 @@ public class MessageListener {
 						user
 						+ "\0"
 						+ Integer.toString(plugin.getServer()
-								.getOnlinePlayers().length) + "\0"
+								.getOnlinePlayers().size()) + "\0"
 								+ plugin.getUsername());
 			} catch (UnsupportedEncodingException ex) {
 				ex.printStackTrace();

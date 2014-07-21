@@ -32,9 +32,4 @@ LilyEssentials now has completely configurable message formats!
 The placeholders(when applicable) are ```{message}```, ```{player}```, ```{players}```, and ```{server}```.
 you can also use color codes with &(0-9,a-f,k-o)
 
-#### New feature: large-mode
-This is an option in config which will make lilyessentials run much faster on large servers. It also includes benefits such as better error handling (tells you if a player is offline when you try to message them, etc.)
 
-However, if you are a smaller server (<50 players), it may be slightly slower to use this.
-
-DISCLAIMER: large-mode has not been thoroughly tested, but it should work fine :)​
